@@ -47,5 +47,42 @@
     }
     </script>
 
+<div class="container">
+    <img src="Abelia.jpg" height="200" width="200"  id="image" 
+    class="img-fluid" alt="Responsive image"/>
+    <img src="NASTURTIUM.jpg"  height="200" width="200"  id="image"
+    class="img-fluid" alt="Responsive image" />
+   <img src="SANDWORT.jpg" height="200" width="200" id="image"
+        class="img-fluid" alt="Responsive image" />
+        <br>
+        <input type="button" onclick="rotateImage()" value="Select Image">
+    </div>
+    
+<script>
+    var currentImage=0;
+    function rotateImage(){
+       
+        var Image_Id = document.getElementById('image');
+        switch(currentImage){
+            case 0:
+            Image_Id.src = "Abelia.jpg";
+            currentImage++;
+            break;
+ 
+            case 1:
+            Image_Id.src = "NASTURTIUM.jpg";
+            currentImage++;
+            break;
+            case 2:
+            Image_Id.src = "SANDWORT.jpg";
+            currentImage++;
+            break;
+            
+        }
+            
+        }        
+    
+</script>
+
 </body>
 </html> 
