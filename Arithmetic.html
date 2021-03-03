@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>
+        Arithmetic
+    </title>
+</head>
+<body>
+
+<h2>Shital Nasam computes</h2>
+
+<form>
+    <label for="first_num">Enter first number</label>
+    <input type ="number" id="first_num" name="first_num" min=10 max=50 step=2 value=10> <br>
+
+    <label for="second_num">Enter second number</label>
+    <input type ="number" id="second_num" name="second_num" min=10 max=50 step=2 value=2> <br>
+
+    <input type="button" onclick="permutations()" value="Compute">
+</form>
+
+
+<p id="result">The result displays </p>
+
+<script> 
+
+function permutations(){
+    firstnum = document.getElementById("first_num").value
+    secondnum = document.getElementById("second_num").value
+    var product = 1;
+
+    let i=firstnum;
+
+    do{
+        product *=i;
+        i--
+    }while(i>=(firstnum-secondnum+1))
+
+
+    out = document.getElementById("result")
+    out.innerHTML = firstnum+" permute "+secondnum+" is "+product
+    }
+
+</script>
+
+</body>
+</html> 
